@@ -1,0 +1,183 @@
+/* ==========================================================================
+                    Default Theme                        
+============================================================================= 
+fonts  :    Teko & Jost
+-----------------------------------------------------------------------------
+colors :
+
+        Bright yellow : #FFAE2C
+        slate gray    : #6C7E86
+        platinum      : #E4E6E3  
+        Black         : #000000
+        White         : #FFFFFF
+        sea green     : #00F5D4
+
+==============================================================================*/
+
+/* ===========================================================================
+
+                HTML, Body - general css which can be apply to all                                          
+
+==============================================================================*/
+
+html,body{
+        height: 100%;
+
+}
+
+body{
+        color: #6C7E86           /*    default text colour for all   */
+}
+
+h1,h2,h3,h4,h5,h6{
+        font-family: "Teko", sans-serif;     /*   san serif will be accessed defaultly when teko font is unavailable  */
+}
+
+p{
+        font-family: "Jost", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        
+}
+
+section{
+        background: #fff;
+        overflow: hidden;
+}
+
+/* ===========================================================================
+
+                        Buttons - general apply to all buttons                                        
+
+==============================================================================*/
+
+.btn-general{
+        font-family: 'Teko', sans-serif;
+        border-radius: 28px;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin: 0 8px;                             /*      outside spaceing not much useful but having it may useful    */
+        padding: 12px 46px;                                  /*     inner spaceing in button     */
+        transition: all .5s;
+
+        /* tempory css we are taking below to look the color while testing before writing 'btn-home' in home section*/
+        /* color: aliceblue;
+        border: 2px solid white; */
+}
+
+
+
+/* ===========================================================================
+
+                          Pre Loader                                          
+
+==============================================================================*/
+
+#preloader{
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+        
+}
+
+#preloader_status{
+        background-image: url("../images/preloader/preloader.gif");
+        background-repeat: no-repeat;
+        width: 100px;                          /*     same measurements of gif should be used    */
+        height: 100px;
+        position: absolute;
+        top : 50%;
+        left : 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+}
+
+/* ===========================================================================
+
+                          Home                                         
+
+==============================================================================*/
+
+#home{
+        background: none;                     /*      here we will override the bg of section     */
+        height: 100%;
+}
+
+#home-bg-video{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        min-height: 100%;
+        min-width: 100%;
+        width: auto;
+        height: auto;
+        z-index: -2;
+        background: url("../images/home-poster/poster.jpg") no-repeat;
+        background-size: cover;
+
+}
+
+#home-overlay{
+        background-color: rgba(0, 0, 0, .8);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        /* from skiping some problems / no much important to write */
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* because it will adjust to full screen to all browsers */
+        z-index: -1;                                                    /*   since it should be above the bg-video   */
+}
+
+#home-content{
+        width: 100%;
+        height: 100%;
+        display: table;
+}
+
+#home-content-inner{
+        display: table-cell;
+        vertical-align: middle;                                           /*   it makes all the content to center of home page   */
+}
+
+#home-heading h1{
+        color: #fff;
+        font-size: 80px;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin: 0;
+        display: inline-block;
+}
+
+#home-heading h1 span{
+        color: #ffae2c;
+        font-weight: 500;
+}
+
+#home-text p{
+        color: #fff;
+        font-size: 18px;
+        font-weight: 100;
+        margin: 8px 0 30px 0;                               /*    top right bottom left space gap for text to border of line height and button 30px is gap to button  */
+
+}
+
+.btn-home{
+        color: #fff;
+        border: 1px solid white;
+}
+
+.btn-home:hover,
+.btn-home:focus{
+        color: #000;
+        background-color: #00F5D4;
+        border: 1px solid #00F5D4;
+}

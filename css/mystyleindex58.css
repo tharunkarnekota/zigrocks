@@ -1,0 +1,1192 @@
+/* ==========================================================================
+                    Default Theme                        
+============================================================================= 
+fonts  :    Teko & Jost
+-----------------------------------------------------------------------------
+colors :
+
+        Bright yellow : #FFAE2C
+        slate gray    : #6C7E86
+        platinum      : #E5E4E2  
+        Black         : #000000
+        White         : #FFFFFF
+        sea green     : #00F5D4
+
+==============================================================================*/
+
+/* ===========================================================================
+
+                HTML, Body - general css which can be apply to all                                          
+
+==============================================================================*/
+
+html,body{
+        height: 100%;
+
+}
+
+body{
+        color: #6C7E86           /*    default text colour for all   */
+}
+
+h1,h2,h3,h4,h5,h6{
+        font-family: "Teko", sans-serif;     /*   san serif will be accessed defaultly when teko font is unavailable  */
+}
+
+p{
+        font-family: "Jost", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        
+}
+
+section{
+        background: #fff;
+        overflow: hidden;
+}
+
+/* ===========================================================================
+
+                        Buttons - general apply to all buttons                                        
+
+==============================================================================*/
+
+.btn-general{
+        font-family: 'Teko', sans-serif;
+        border-radius: 28px;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin: 0 8px;                             /*      outside spaceing not much useful but having it may useful    */
+        padding: 12px 46px;                                  /*     inner spaceing in button     */
+        transition: all .5s;
+
+        /* tempory css we are taking below to look the color while testing before writing 'btn-home' in home section*/
+        /* color: aliceblue;
+        border: 2px solid white; */
+}
+
+/* home button */
+
+.btn-home{
+        color: #fff;
+        border: 1px solid white;
+}
+
+.btn-home:hover,
+.btn-home:focus{                                            /*     changes while curser moves over button    */
+        color: #000;
+        background-color: #00F5D4;
+        border: 1px solid #00F5D4;
+}
+
+/* button yellow / service button */
+
+.btn-yellow{
+        background-color: #ffae2c;
+        border: 1px solid #ffae2c;
+        font-family: 'Jost', sans-serif;
+}
+
+.btn-yellow:hover,
+.btn-yellow:focus{
+        background-color: #00F5D4;
+        color: #fff;
+        border: 1px solid #00F5D4;
+}
+
+/* button white */
+
+.btn-white{
+        background-color: #fff;
+        border: 1px solid #fff;
+        font-family: 'Jost', sans-serif;
+}
+
+.btn-white:hover,
+.btn-white:focus{
+        background-color: #555;
+        color: #fff;
+        border: 1px solid #555;
+}
+
+/* ===========================================================================
+
+                          Pre Loader                                          
+
+==============================================================================*/
+
+#preloader{
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+        
+}
+
+#preloader_status{
+        background-image: url("../images/preloader/preloader.gif");
+        background-repeat: no-repeat;
+        width: 100px;                          /*     same measurements of gif should be used    */
+        height: 100px;
+        position: absolute;
+        top : 50%;
+        left : 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+}
+
+/* ===========================================================================
+
+                          Home                                         
+
+==============================================================================*/
+
+#home{
+        background: none;                     /*      here we will override the bg of section     */
+        height: 100%;
+}
+
+#home-bg-video{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        min-height: 100%;
+        min-width: 100%;
+        width: auto;
+        height: auto;
+        z-index: -2;
+        background: url("../images/home-poster/poster.jpg") no-repeat;
+        background-size: cover;
+
+}
+
+#home-overlay{
+        background-color: rgba(0, 0, 0, .8);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        /* from skiping some problems / no much important to write */
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* because it will adjust to full screen to all browsers */
+        z-index: -1;                                                    /*   since it should be above the bg-video   */
+}
+
+#home-content{
+        width: 100%;
+        height: 100%;
+        display: table;
+}
+
+#home-content-inner{
+        display: table-cell;
+        vertical-align: middle;                                           /*   it makes all the content to center of home page   */
+}
+
+#home-heading h1{
+        color: #fff;
+        font-size: 80px;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin: 0;
+        display: inline-block;
+}
+
+#home-heading h1 span{
+        color: #ffae2c;
+        font-weight: 500;
+}
+
+#home-text p{
+        color: #fff;
+        font-size: 18px;
+        font-weight: 100;
+        margin: 8px 0 30px 0;                               /*    top right bottom left space gap for text to border of line height and button 30px is gap to button  */
+
+}
+
+
+#arrow-down{
+        position: absolute;
+        left: 50%;
+        bottom: 40px;
+        color: #fff;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        margin-left: -16px;
+        z-index: 1;
+        transition: all .5s;
+}
+
+#arrow-down:hover,
+#arrow-down:focus{
+        color: #ffae2c;
+        font-size: 40px;
+        margin-bottom: 15px;
+}
+
+/* ===========================================================================
+
+                        Content Boxes  -  generic boxes : applies for all                                   
+
+==============================================================================*/
+
+.content-box-lg{
+        padding: 100px 0;                                         /*      [top/bottom] [left/right]  spaceing from boundary line   */
+}
+.content-box-md{
+        padding: 60px 0;
+}
+
+/* ===========================================================================
+
+                Vertical Heading / Horizontal heading                                       
+
+==============================================================================*/
+
+.vertical-heading{
+        margin-top: -10px;                                         /*      to move all horizontal text upwards         */
+}
+
+.vertical-heading h5{
+        color: #ffae2c;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        word-spacing: 10px;
+        /* display: inline-block; */
+        transform: rotate(-90deg);
+        position: relative;
+        top: -200px;
+        left: -200px;
+}
+
+/*              .vertical-heading h5,               // instead of writting two times , like this the below stmts will apply for both classes
+                .horizontal-heading h5{
+                color: #ffae2c;
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: uppercase;
+                word-spacing: 10px;
+} */
+
+.vertical-heading h2{
+        margin-left: 150px;
+        margin-top: -10px;
+        font-size: 44px;
+        font-weight: 200;
+}
+
+.horizontal-heading{
+        margin-bottom: 40px;
+}
+
+.horizontal-heading h5{
+        color: #ffae2c;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        word-spacing: 10px;
+        display: inline-block;
+        margin-bottom: 10px;
+}
+
+.horizontal-heading h2{
+        font-size: 44px;
+        font-weight: 200;
+        line-height: 48px;
+        margin: 0;
+}
+
+/* ===========================================================================
+
+                        About - 01                                        
+
+==============================================================================*/
+
+#about-right p{
+        font-size: 18px;
+}
+
+#about-bottom{
+        margin-top: -20px;                      /*    moving the image upwards towards text to reduce the space between them    */
+}
+
+#about-bottom img{
+        margin: 0 auto;                              /*     the image has to adjust automatically to any device / screen    */
+}
+
+
+/* ===========================================================================
+
+                        About - 02                                        
+
+==============================================================================*/
+
+#about-02{
+        background-color: #e5e4e2;
+}
+
+.about-item{
+        background-color: #fff;
+        padding: 60px 30px;
+        box-shadow: 10px 0 10px rgba(204, 37, 37, 0.2);
+        margin: 10px;        /* space between the block top bottom right left , you can see the change clearly when you minimize the tab and scroll the block */
+}
+
+/* .about-item i{               //   adding changes to i is not direct applying through css ,, so we use span    
+        font-size: 40px;
+} */
+
+.about-item span{
+        font-size: 50px;
+        display: inline-block;
+
+}
+
+.about-item h3{
+        font-size: 30px;
+        margin-bottom: 20px;
+}
+
+.about-item hr{
+        width: 120px;                                                      /*    width of line    */
+        height: 3px;                                                            /*    height of line    */
+        background-color: #ffae2c;
+        border: none;
+        margin: 0 auto;                                 /*    to center the line [top&bottom : 0] [left&right : auto]    */
+}
+
+.about-item p{
+        margin-top: 20px;                                   /*      to have space between line and paragragh/text     */
+}
+
+/*   Hover[handover/mouseover] State   */
+
+.about-item:hover{
+        background-color: #ffae2c;
+        color: #fff;
+}
+
+.about-item:hover span{
+        color: #fff;                           /*  we want icon to change into white , later it has to transform , otherwise it will be black */
+        transform: translateY(-30px);               /*      to move the icon upwards [vertically / y-axis] upto 30px    */
+}
+
+.about-item:hover hr{
+        background-color: black;
+}
+
+/*   Smooth Transition   */
+.about-item, .about-item span, .about-item hr{
+        transition: all .5s ease-in-out;
+  /*    animation effect 'ease in' : starts slowly ends fastly
+        animation effect 'ease out' : starts fastly ends slowly
+        animation effect 'ease in-out' : starts slowly chamges to fastly and Ends slowly chamges to fastly  */
+}
+
+
+/* ===========================================================================
+
+                        Team                                       
+
+==============================================================================*/
+
+#team-left p{
+        margin-top: 50px;          /*    distance between paragraph and vertical text    */
+}
+
+.team-member{
+        margin: 10px;                 /*    gap b/w two team members profile       */
+        position: relative;
+}
+
+.team-member-overlay{
+        background-color: rgba(0,0,0,0.8);           /*    a refer to aqua i.e transparency   */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: table;
+        opacity: 0;
+        transition: all 400ms linear;
+}
+
+.team-member-info{
+        width: 100%;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+}
+
+.team-member-info h6{
+        color: #ffae2c;
+        font-size: 20px;
+        font-family: 'Jost', sans-serif;
+        margin: 0;
+}
+
+.team-member-info p{
+        color: #fff;
+}
+
+.team-member:hover .team-member-overlay{
+        opacity: 1;
+}
+
+/* ===========================================================================
+
+                        Social Icons                                       
+
+==============================================================================*/
+
+ul.social-list{
+        padding: 0;
+}
+
+ul.social-list li{
+        display: inline-block;                                         /*    makes all the icons in one line    */
+        padding: 0;
+        margin: 5px;                                                   /*   the space between the icons / boxes  */
+}
+
+ul.social-list li a{
+        border: 1px solid #fff;
+    /*  border-radius: 50%;          */                              /*      makes the boxes into circle shape      */
+        display: inline-block;                                         /*    Makes all the icons in one line     */
+        width: 35px;                                                     /*       width of anchor box        */
+        height: 35px;                                                     /*       height of anchor box    */
+        line-height: 35px;                                           /* here it will adjust icon to center of box  */
+        transition: all 400ms linear;
+}
+
+ul.social-list li a:hover{
+        background-color: #ffae2c;
+        border-color: #ffae2c;
+}
+
+/* ===========================================================================
+
+                        Owl Carousel Nav << >>                                      
+
+==============================================================================*/
+
+.owl-theme .owl-nav [class*=owl-]{
+        outline: none;
+}
+
+.owl-theme .owl-nav [class*=owl-] span{
+        color: #000;
+        font-size: 20px;
+        background: none;
+        transition: all 300ms;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover{
+        background: none;                    /*    otherwise it will be black     */
+}
+
+.owl-theme .owl-nav [class*=owl-] span:hover{
+        color: #ffae2c;
+        
+}
+
+/* ===========================================================================
+
+                        Skills                                   
+
+==============================================================================*/
+
+.skill{
+        margin-bottom: 30px;                                   /*       gap between top and bottom progress      */
+
+}
+
+.skill h4{
+        margin: 0;                                  /* the distance b/w heading and progress will be 0 [attached to each other]  */
+        line-height: 50px;                        /* the distance b/w heading and bottom border line [indirectly it will effect progress ] will be 50px */
+        font-weight: normal;
+}
+
+.progress{
+        height: 25px;
+    /*    border-radius: 0;          //gives to prefect rectangular shape instead of slightly curved rectangular      */        
+        background-color: #e4e6e3;
+        overflow: visible;
+}
+
+.progress-bar{
+        background-color: #ffae2c;
+        position: relative;
+        overflow: visible;
+}
+
+.progress-bar span{
+        font-weight: 600;
+        font-family: 'Jost', sans-serif;
+        background-color: #555;
+        position: absolute;
+        padding: 8px;                           /* make arrow symbol down  */
+        right: -22px;                           /* makes arrow move left from default position */          
+        top: -50px;
+}
+
+.progress-bar span::before{
+     /* content: '$'; */              /*  gives the output as $95%  */
+        content: '';
+    /* small triangle design */
+        border-top: 16px solid #555;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        position: absolute;
+        bottom: -15px;
+}
+
+
+
+/* ===========================================================================
+
+                        statement - Quote                                       
+
+==============================================================================*/
+
+#statement{
+        background: url("../images/statement/laptop2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;                      /* for parallax effect i.e image will be fixed cant be changed while scrolling */
+}
+
+#statement .content-box-md{
+        background:rgba(0, 0, 0, .3);
+}
+
+#quote-box{
+        min-height: 200px;
+        margin-top: 20px;
+}
+
+#statement h3{
+        color: #fff;
+        font-family: 'Jost', sans-serif;
+        font-weight: 600;
+        padding: 20px 5px;                          /* inner space of h3 top/bottm: 20px , right/left: 5px    */
+        margin-top: 60px;
+}
+
+#statement p{
+        color: #ffae2c;
+        font-weight: 600;
+        font-size: 24px;
+        padding: 10px 0px;
+}
+
+/* ===========================================================================
+
+                        Service - 01                                     
+
+==============================================================================*/
+
+#services-01 img{
+        margin: 40px auto;                                          /*    top/bottom  left/right  spacing  */
+
+}
+
+.service{
+        margin: 30px 0;
+}
+
+.service .icon{
+        font-size: 42px;
+        margin: 0;
+        transition: all 400ms linear;
+
+}
+
+.service:hover .icon{
+        color: #ffae2c;
+        transform: translateX(-20px);                                 /*   webkit   */
+}
+
+.service h5{
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #ffae2c;
+        margin-bottom: 6px;
+        transition: all 400ms linear;
+}
+
+.service:hover h5{
+        color: #6c7e86;    
+
+}
+
+.service h4{
+        font-size: 28px;
+        margin-bottom: 8px;
+}
+
+.service p{
+        line-height: normal;
+}
+
+/* ===========================================================================
+
+                        Service - 02                                     
+
+==============================================================================*/
+
+#services-02{
+        background-color: #e4e6e3;
+}
+
+#services-tabs ul{
+        margin-bottom: 30px;
+}
+
+#services-tabs ul li{
+        padding: 5px 30px;
+}
+
+#services-tabs ul li a{
+        text-decoration: none;                          /*   it removes the underline of anchor text; */
+        font-family: 'Jost', sans-serif;
+        text-transform: uppercase;
+        font-size: 18px;
+        color: #555;
+        font-weight: 500;
+        padding: 0;
+}
+
+/* we want to change the colour of heading text to bright yellow whose tab is active */
+
+#services-tabs ul li.r-tabs-state-active a{
+        color: #ffae2c;
+        font-weight: 800;
+        border-bottom: 3px solid #ffae2c;
+        padding-bottom: 5px;
+        transition: all 300ms linear;
+}
+
+.service-tab .col-md-6{
+        padding: 5px;
+        
+}
+
+.service-tab img{
+        width: 100%;
+        margin: 0 auto;                                       
+}
+
+.service-tab .tab-bg{
+        background-color: #fff;
+        height: 100%;
+        padding: 50px 30px;
+}
+
+.service-tab h2{
+        font-family: 'Jost',sans-serif;
+        font-weight: 100;
+        font-size: 42px;
+        color: #ffae2c;
+        margin-bottom: 20px;
+}
+
+.service-tab h3{
+        font-size: 34px;
+        margin-bottom: 20px 0;     
+}
+
+.service-tab p{
+        line-height: 26px;
+        margin-bottom: 30px;
+}
+
+/* ===========================================================================
+
+                        Portfolio                                     
+
+==============================================================================*/
+#portfolio{
+        padding-bottom: 180px;
+}
+
+#portfolio .horizontal-heading{
+        margin-bottom: 50px;
+        
+}
+
+.grid .col-md-3{
+        padding: 0;             /* use if you want spacing between work-box  */
+        overflow: hidden;
+        position: relative;
+}
+
+.portfolio-buttons{
+        margin-bottom: 10px;
+        padding: 20px 25px 20px 0;
+}
+
+.portfolio-buttons button{
+        font-family: 'Jost',sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: uppercase;
+        background: transparent;
+        padding: 5px;
+        margin: 5px 15px 10px 0;
+        transition: all 300ms ease;            /*   - webkit -    */
+}
+
+.portfolio-buttons button.active{
+        color: #ffae2c;
+        border-bottom: 3px solid #ffae2c;
+        border-radius: 0;
+        box-shadow: none;
+        
+}
+
+/*   zoom effect    */
+.portfolio-item img{
+        width: 100%;
+        height: auto;
+        transition: all 400ms ease-in-out;
+}
+
+.portfolio-item:hover img{
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);                          /* 1.4 - 140% zoom  */
+}
+
+/* overlay effect */
+.portfolio-item-overlay{
+        background-color: rgba(0, 0, 0, .8);
+        position: absolute;                          /* parent col-md-3 will be relative */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        cursor: zoom-in;
+        opacity: 0;
+        transition: all 400ms ease-in-out;
+        
+}
+
+.portfolio-item-details{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+}
+
+.portfolio-item-details h3{
+        color: #ffae2c;
+        text-transform: uppercase;
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+        transform: translateY(-50%);
+        transition: all 400ms ease-in-out;
+}
+
+.portfolio-item-details span{
+        display: inline-block;                       /* display inline block is must for span to activate height width */
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        height: 6px;
+        width: 35px;
+        margin: 10px auto;
+
+}
+
+.portfolio-item-details p{
+        font-size: 18px;
+        color: white;
+        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
+        transform: translateY(50%);
+        transition: all 400ms ease-in-out;
+}
+
+/* mouse over effect */
+.portfolio-item:hover .portfolio-item-overlay{
+        opacity: 1;
+}
+
+.portfolio-item:hover .portfolio-item-details h3{
+        transform: translateY(0%);
+
+}
+
+.portfolio-item:hover .portfolio-item-details p{
+        transform: translateY(0%);
+}
+
+
+
+/* ===========================================================================
+
+                                  testimonial                          
+
+==============================================================================*/
+
+#testimonials{
+        background-color: #e4e6e3;
+        overflow: visible;
+}
+
+#testimonials .horizontal-heading{
+        padding: 60px 0;
+        margin-bottom: 120px;
+}
+
+#testimonial-slider{
+        background-color: #ffae2c;
+        top: -120px;                                 /* it will lift the slider upwards */
+}
+
+.testimonial{
+        padding: 20px 45px 0 45px;
+        color: #fff;
+}
+
+.testimonial h3{
+        font-size: 30px;
+        font-family: 'Jost', sans-serif;
+        font-weight: 600;
+        line-height: 32px;
+}
+
+.testimonial .stars{
+        font-size: 22px;
+        text-align: right;
+}
+
+.testimonial p{
+        line-height: normal;
+        margin: 0;
+        margin: 5px 0 20px 0;
+}
+
+.testimonial .row{
+        margin-bottom: 10px;
+}
+
+.author .author-details{
+        margin: 25px 0;
+        width: 120px;
+}
+
+.author .author-details p{
+        margin: 0;
+        font-weight: 600;
+}
+
+/* on mouse over */
+#testimonials .owl-theme .owl-nav [class*=owl-] span{
+        color: #fff;
+        
+}
+
+#testimonials .owl-theme .owl-nav [class*=owl-] span:hover{
+        color: #000;
+        
+}
+
+
+
+/* ===========================================================================
+
+                        pricing                         
+
+==============================================================================*/
+
+.pricing-box{
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, .5);          /* horizonal vertical blur spread colour */
+        padding: 32px 22px;
+        border-radius: 6px;
+        transition: all 400ms linear;
+        margin-bottom: 20px;
+}
+
+.pricing-box:hover{
+        background-color: #ffae2c;
+        color: #fff;
+}
+
+.pricing-box .type h4{
+        color: #ffae2c;
+        font-size: 24px;
+        margin-bottom: 24px;
+        transition: all 400ms linear;
+}
+
+.pricing-box:hover .type h4{
+        color: rgb(61, 158, 52);
+
+}
+
+.pricing-box .price{
+        border-top: 2px solid #e0e0e0;
+        border-bottom: 2px solid #e0e0e0;
+        padding: 24px 0;
+}
+
+.pricing-box .price h2{
+        font-family: 'Jost', sans-serif;
+        font-size: 42px;
+        font-weight: 100;
+        margin-left: 24px;
+        position: relative;
+}
+
+.pricing-box .price h2 span.dollar{
+        font-size: 20px;
+        position: absolute;
+        left: -15px;
+        top: 5px;
+}
+
+.pricing-box .price h2 span.month{
+        font-size: 16px;
+        font-weight: 400;
+        position: absolute;
+        bottom: -14px;
+}
+
+.pricing-box .price p{
+        line-height: normal;
+        font-weight: 200;
+        margin: 0;
+        padding: 0;;
+}
+
+.pricing-box ul.package{
+        list-style: none;
+        padding: 20px 0;
+
+}
+
+.pricing-box ul.package li{
+        font-family: 'Jost',sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 40px;
+}
+
+.pricing-box ul.package li span{
+        margin-right: 20px;
+}
+
+.pricing-box .btn-yellow{
+        width: 96%;
+
+}
+
+.pricing-box:hover .btn-yellow{
+        background-color: #fff;
+        border: 1px solid  #fff;
+}
+
+.pricing-box .btn-yellow:hover{
+        background-color: #555;
+        border: 1px solid #555;
+
+}
+
+.pricing-box.black{
+        background-color: #212226;
+        color: white;
+}
+
+.pricing-box.black h4{
+        color: #ffae2c;
+}
+
+.pricing-box.black:hover{
+        background-color: #ffae2c;
+}
+
+.pricing-box .btn-white{
+        width: 96%;
+}
+
+
+
+/* ===========================================================================
+
+                        stats                        
+
+==============================================================================*/
+
+#stats{
+        background: url("../images/stats/laps1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;                      /* for parallax effect i.e image will be fixed cant be changed while scrolling */
+}
+
+#stats .content-box-md{
+        background:rgba(0, 0, 0, .4);
+}
+
+#stats .horizontal-heading{
+        margin-bottom: 50px;
+
+}
+
+#stats .horizontal-heading h2{
+        color: #fff;
+}
+
+.stats-item{
+        background-color: rgba(0,0,0,0.3);
+        border-radius: 6px;
+        min-height: 170px;
+        padding: 25px 50px;
+        transition: all 400ms linear;
+}
+
+.stats-item span{
+        display: inline-block;                                   /*  it is must and then only we can use margin to it */
+        font-size: 42px;
+        color: #ffae2c;
+        margin-bottom: 8px;
+        transition: all 400ms linear;
+}
+
+.stats-item h3{
+        font-size: 36px;
+        color: rgb(68, 174, 223);
+        margin: 2px 0;
+}
+
+.stats-item p{
+        color: #fff;
+        margin: 0;
+}
+
+.stats-item:hover{
+        background-color: #ffae2c;
+}
+
+.stats-item:hover span{
+        color: #212224;
+        transform: translateY(-20px);
+}
+
+/* ===========================================================================
+
+                        clients
+
+==============================================================================*/
+
+#clients-list{
+        padding-top: 30px;
+
+}
+
+#clients-list .client{
+        padding: 0 10px;
+        max-width: 100px;              /*    max height automatically choosen */
+        margin: 0 auto;
+        line-height: 100px;
+        
+}
+
+#clients-list .client img{
+        display: inline-block;
+}
+
+/* ===========================================================================
+
+                        blog
+
+==============================================================================*/
+
+#blog{
+        background-color: #e4e6e3;
+}
+
+.blog-left p{
+        margin: 24px 0;
+}
+
+#blog-btn a{
+        margin: 0;
+}
+
+.blog-post{
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, .5);
+        border-radius: 6px;
+        margin-top: 20px;
+
+}
+
+.blog-post h4{
+        line-height: 40px;
+        margin: 0;
+}
+
+.blog-post > p{                           /*   > will select only first paragraph of class  */
+        line-height: 24px;
+        margin: 0;
+        font-weight: 300;
+}
+
+.blog-post a{
+        display: inline-block;
+        margin-top: 24px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Jost',sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffae2c;
+        transition: all 400ms linear;
+
+}
+
+.blog-post a:hover{
+        color: blue;
+}
+
+.blog-post .post-meta{
+        margin-top: 30px;
+        border-top: 1px solid #e0e0e0;
+        padding-top: 12px;
+}
+
+.blog-post .post-meta p img{
+        max-width: 50px;
+        border-radius: 50%;
+}
+
+.blog-post .post-meta p{
+        line-height: 50px;                         /*   since img is of 50px width line should be also same then the text will be at center */
+        font-family: 'Jost',sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0;
+}
+
+.blog-post .post-meta .text-right{
+        text-align: right;
+}

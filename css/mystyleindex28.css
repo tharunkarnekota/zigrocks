@@ -1,0 +1,528 @@
+/* ==========================================================================
+                    Default Theme                        
+============================================================================= 
+fonts  :    Teko & Jost
+-----------------------------------------------------------------------------
+colors :
+
+        Bright yellow : #FFAE2C
+        slate gray    : #6C7E86
+        platinum      : #E5E4E2  
+        Black         : #000000
+        White         : #FFFFFF
+        sea green     : #00F5D4
+
+==============================================================================*/
+
+/* ===========================================================================
+
+                HTML, Body - general css which can be apply to all                                          
+
+==============================================================================*/
+
+html,body{
+        height: 100%;
+
+}
+
+body{
+        color: #6C7E86           /*    default text colour for all   */
+}
+
+h1,h2,h3,h4,h5,h6{
+        font-family: "Teko", sans-serif;     /*   san serif will be accessed defaultly when teko font is unavailable  */
+}
+
+p{
+        font-family: "Jost", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        
+}
+
+section{
+        background: #fff;
+        overflow: hidden;
+}
+
+/* ===========================================================================
+
+                        Buttons - general apply to all buttons                                        
+
+==============================================================================*/
+
+.btn-general{
+        font-family: 'Teko', sans-serif;
+        border-radius: 28px;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin: 0 8px;                             /*      outside spaceing not much useful but having it may useful    */
+        padding: 12px 46px;                                  /*     inner spaceing in button     */
+        transition: all .5s;
+
+        /* tempory css we are taking below to look the color while testing before writing 'btn-home' in home section*/
+        /* color: aliceblue;
+        border: 2px solid white; */
+}
+
+
+
+/* ===========================================================================
+
+                          Pre Loader                                          
+
+==============================================================================*/
+
+#preloader{
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+        
+}
+
+#preloader_status{
+        background-image: url("../images/preloader/preloader.gif");
+        background-repeat: no-repeat;
+        width: 100px;                          /*     same measurements of gif should be used    */
+        height: 100px;
+        position: absolute;
+        top : 50%;
+        left : 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+}
+
+/* ===========================================================================
+
+                          Home                                         
+
+==============================================================================*/
+
+#home{
+        background: none;                     /*      here we will override the bg of section     */
+        height: 100%;
+}
+
+#home-bg-video{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        min-height: 100%;
+        min-width: 100%;
+        width: auto;
+        height: auto;
+        z-index: -2;
+        background: url("../images/home-poster/poster.jpg") no-repeat;
+        background-size: cover;
+
+}
+
+#home-overlay{
+        background-color: rgba(0, 0, 0, .8);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        /* from skiping some problems / no much important to write */
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* because it will adjust to full screen to all browsers */
+        z-index: -1;                                                    /*   since it should be above the bg-video   */
+}
+
+#home-content{
+        width: 100%;
+        height: 100%;
+        display: table;
+}
+
+#home-content-inner{
+        display: table-cell;
+        vertical-align: middle;                                           /*   it makes all the content to center of home page   */
+}
+
+#home-heading h1{
+        color: #fff;
+        font-size: 80px;
+        font-weight: 100;
+        text-transform: uppercase;
+        margin: 0;
+        display: inline-block;
+}
+
+#home-heading h1 span{
+        color: #ffae2c;
+        font-weight: 500;
+}
+
+#home-text p{
+        color: #fff;
+        font-size: 18px;
+        font-weight: 100;
+        margin: 8px 0 30px 0;                               /*    top right bottom left space gap from border of line height and button 30px is gap to button  */
+
+}
+
+.btn-home{
+        color: #fff;
+        border: 1px solid white;
+}
+
+.btn-home:hover,
+.btn-home:focus{                                            /*     changes while curser moves over button    */
+        color: #000;
+        background-color: #00F5D4;
+        border: 1px solid #00F5D4;
+}
+
+#arrow-down{
+        position: absolute;
+        left: 50%;
+        bottom: 40px;
+        color: #fff;
+        font-size: 32px;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        margin-left: -16px;
+        z-index: 1;
+        transition: all .5s;
+}
+
+#arrow-down:hover,
+#arrow-down:focus{
+        color: #ffae2c;
+        font-size: 40px;
+        margin-bottom: 15px;
+}
+
+/* ===========================================================================
+
+                        Content Boxes  -  generic boxes : applies for all                                   
+
+==============================================================================*/
+
+.content-box-lg{
+        padding: 100px 0;                                         /*      [top/bottom] [left/right]  spaceing from boundary line   */
+}
+.content-box-md{
+        padding: 60px 0;
+}
+
+/* ===========================================================================
+
+                        Vertical Heading                                        
+
+==============================================================================*/
+
+.vertical-heading{
+        margin-top: -10px;                                         /*      to move all horizontal text upwards         */
+}
+
+.vertical-heading h5{
+        color: #ffae2c;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        word-spacing: 10px;
+        transform: rotate(-90deg);
+        position: relative;
+        top: -200px;
+        left: -200px;
+}
+
+.vertical-heading h2{
+        margin-left: 150px;
+        margin-top: -10px;
+        font-size: 44px;
+        font-weight: 200;
+}
+
+
+/* ===========================================================================
+
+                        About - 01                                        
+
+==============================================================================*/
+
+#about-right p{
+        font-size: 18px;
+}
+
+#about-bottom{
+        margin-top: -20px;                      /*    moving the image upwards towards text to reduce the space between them    */
+}
+
+#about-bottom img{
+        margin: 0 auto;                              /*     the image has to adjust automatically to any device / screen    */
+}
+
+
+/* ===========================================================================
+
+                        About - 02                                        
+
+==============================================================================*/
+
+#about-02{
+        background-color: #e5e4e2;
+}
+
+.about-item{
+        background-color: #fff;
+        padding: 60px 30px;
+        box-shadow: 10px 0 10px rgba(204, 37, 37, 0.2);
+        margin: 10px;        /* space between the block top bottom right left , you can see the change clearly when you minimize the tab and scroll the block */
+}
+
+/* .about-item i{               //   adding changes to i is not direct applying through css ,, so we use span    
+        font-size: 40px;
+} */
+
+.about-item span{
+        font-size: 50px;
+        display: inline-block;
+
+}
+
+.about-item h3{
+        font-size: 30px;
+        margin-bottom: 20px;
+}
+
+.about-item hr{
+        width: 120px;                                                      /*    width of line    */
+        height: 3px;                                                            /*    height of line    */
+        background-color: #ffae2c;
+        border: none;
+        margin: 0 auto;                                 /*    to center the line [top&bottom : 0] [left&right : auto]    */
+}
+
+.about-item p{
+        margin-top: 20px;                                   /*      to have space between line and paragragh/text     */
+}
+
+/*   Hover[handover/mouseover] State   */
+
+.about-item:hover{
+        background-color: #ffae2c;
+        color: #fff;
+}
+
+.about-item:hover span{
+        color: #fff;                           /*  we want icon to change into white , later it has to transform , otherwise it will be black */
+        transform: translateY(-30px);               /*      to move the icon upwards [vertically / y-axis] upto 30px    */
+}
+
+.about-item:hover hr{
+        background-color: black;
+}
+
+/*   Smooth Transition   */
+.about-item, .about-item span, .about-item hr{
+        transition: all .5s ease-in-out;
+  /*    animation effect 'ease in' : starts slowly ends fastly
+        animation effect 'ease out' : starts fastly ends slowly
+        animation effect 'ease in-out' : starts slowly chamges to fastly and Ends slowly chamges to fastly  */
+}
+
+
+/* ===========================================================================
+
+                        Team                                       
+
+==============================================================================*/
+
+#team-left p{
+        margin-top: 50px;          /*    distance between paragraph and vertical text    */
+}
+
+.team-member{
+        margin: 10px;                 /*    gap b/w two team members profile       */
+        position: relative;
+}
+
+.team-member-overlay{
+        background-color: rgba(0,0,0,0.8);           /*    a refer to aqua i.e transparency   */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: table;
+        opacity: 0;
+        transition: all 400ms linear;
+}
+
+.team-member-info{
+        width: 100%;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+}
+
+.team-member-info h6{
+        color: #ffae2c;
+        font-size: 20px;
+        font-family: 'Jost', sans-serif;
+        margin: 0;
+}
+
+.team-member-info p{
+        color: #fff;
+}
+
+.team-member:hover .team-member-overlay{
+        opacity: 1;
+}
+
+/* ===========================================================================
+
+                        Social Icons                                       
+
+==============================================================================*/
+
+ul.social-list{
+        padding: 0;
+}
+
+ul.social-list li{
+        display: inline-block;                                         /*    makes all the icons in one line    */
+        padding: 0;
+        margin: 5px;                                                   /*   the space between the icons / boxes  */
+}
+
+ul.social-list li a{
+        border: 1px solid #fff;
+    /*  border-radius: 50%;          */                              /*      makes the boxes into circle shape      */
+        display: inline-block;                                         /*    Makes all the icons in one line     */
+        width: 35px;                                                     /*       width of anchor box        */
+        height: 35px;                                                     /*       height of anchor box    */
+        line-height: 35px;                                           /* here it will adjust icon to center of box  */
+        transition: all 400ms linear;
+}
+
+ul.social-list li a:hover{
+        background-color: #ffae2c;
+        border-color: #ffae2c;
+}
+
+/* ===========================================================================
+
+                        Owl Carousel Nav << >>                                      
+
+==============================================================================*/
+
+.owl-theme .owl-nav [class*=owl-] span{
+        color: #000;
+        font-size: 20px;
+        background: none;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover{
+        background: none;                    /*    otherwise it will be black     */
+}
+
+.owl-theme .owl-nav [class*=owl-] span:hover{
+        color: #ffae2c;
+        transition: all 300ms;
+}
+
+/* ===========================================================================
+
+                        Skills                                   
+
+==============================================================================*/
+
+.skill{
+        margin-bottom: 30px;                                   /*       gap between top and bottom progress      */
+
+}
+
+.skill h4{
+        margin: 0;                                  /* the distance b/w heading and progress will be 0 [attached to each other]  */
+        line-height: 50px;                        /* the distance b/w heading and bottom border line [indirectly it will effect progress ] will be 50px */
+        font-weight: normal;
+}
+
+.progress{
+        height: 25px;
+    /*    border-radius: 0;          //gives to prefect rectangular shape instead of slightly curved rectangular      */        
+        background-color: #e4e6e3;
+        overflow: visible;
+}
+
+.progress-bar{
+        background-color: #ffae2c;
+        position: relative;
+        overflow: visible;
+}
+
+.progress-bar span{
+        font-weight: 600;
+        font-family: 'Jost', sans-serif;
+        background-color: #555;
+        position: absolute;
+        padding: 8px;                           /* make arrow symbol down  */
+        right: -22px;                           /* makes arrow move left from default position */          
+        top: -50px;
+}
+
+.progress-bar span::before{
+     /* content: '$'; */              /*  gives the output as $95%  */
+        content: '';
+    /* small triangle design */
+        border-top: 16px solid #555;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        position: absolute;
+        bottom: -15px;
+}
+
+
+
+/* ===========================================================================
+
+                        statement - Quote                                       
+
+==============================================================================*/
+
+#statement{
+        background: url("../images/statement/laptop2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;                      /* for parallax effect i.e image will be fixed cant be changed while scrolling */
+}
+
+#statement .content-box-md{
+        background:rgba(0, 0, 0, .3);
+}
+
+#quote-box{
+        min-height: 200px;
+        margin-top: 20px;
+}
+
+#statement h3{
+        color: #fff;
+        font-family: 'Jost', sans-serif;
+        font-weight: 600;
+        padding: 20px 5px;                          /* inner space of h3 top/bottm: 20px , right/left: 5px    */
+        margin-top: 60px;
+}
+
+#statement p{
+        color: #ffae2c;
+        font-weight: 600;
+        font-size: 24px;
+        padding: 10px 0px;
+}
